@@ -11,7 +11,8 @@
         android:theme="@style/Theme.LibraryPractice_20220306">
         <activity
             android:name=".ViewPhotoActivity"
-            android:exported="false" />
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+        android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
