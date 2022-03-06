@@ -6,6 +6,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.bumptech.glide.Glide
 import com.gun0912.tedpermission.PermissionListener
 import com.gun0912.tedpermission.normal.TedPermission
 import kotlinx.android.synthetic.main.activity_main.*
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         setupEvents()
         setValues()
     }
-
+//클릭시 이벤트나, 다양한 상황 발생시
     fun setupEvents() {
         
         btnCall.setOnClickListener {
@@ -64,10 +65,11 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-
+//이미지를 보여주나 값을 보여주는 것
     fun setValues() {
 
 //        인터넷상의 이미지를 곧바로 이미지뷰에 반영.
+        Glide.with(this).load("https://thumbnews.nateimg.co.kr/view610///news.nateimg.co.kr/orgImg/hm/2021/06/17/202106171059213930953_20210617105942_01.jpg").into(imgInternet)
 
 
     }
