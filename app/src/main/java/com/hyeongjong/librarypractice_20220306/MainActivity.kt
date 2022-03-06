@@ -67,9 +67,9 @@ class MainActivity : AppCompatActivity() {
     }
 //이미지를 보여주나 값을 보여주는 것
     fun setValues() {
-
+//http에 s가 빠지면 manifest에 퍼미션이 필요
 //        인터넷상의 이미지를 곧바로 이미지뷰에 반영.
-        Glide.with(this).load("https://thumbnews.nateimg.co.kr/view610///news.nateimg.co.kr/orgImg/hm/2021/06/17/202106171059213930953_20210617105942_01.jpg").into(imgInternet)
+        Glide.with(this).load("http://thumbnews.nateimg.co.kr/view610///news.nateimg.co.kr/orgImg/hm/2021/06/17/202106171059213930953_20210617105942_01.jpg").into(imgInternet)
 
 
     }
