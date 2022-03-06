@@ -28,6 +28,14 @@ class MainActivity : AppCompatActivity() {
                 override fun onPermissionGranted() {
 //                    권한이 획득 되었을 때 할 행동 적는 함수
 
+//                    임시 : CALL 기능 실제 활용 => 앱이 죽을 예정
+
+                    val myUri = Uri.parse("tel:010-5555-5555")
+                    val myIntent = Intent( Intent.ACTION_CALL, myUri)
+                    startActivity(myIntent)
+
+                }
+
                 }
 
                 override fun onPermissionDenied(deniedPermissions: MutableList<String>?) {
@@ -36,17 +44,6 @@ class MainActivity : AppCompatActivity() {
                 }
 
             }
-
-
-
-            
-//            임시 : CALL 기능 실제 활용 => 앱이 죽을 예정
-
-            val myUri = Uri.parse("tel:010-5555-5555")
-            val myIntent = Intent( Intent.ACTION_CALL, myUri)
-            startActivity(myIntent)
-            
-        }
 
         imgProfile.setOnClickListener {
 
